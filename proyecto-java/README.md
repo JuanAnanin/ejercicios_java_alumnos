@@ -1,13 +1,13 @@
 # Cuaderno de Ejercicios de Java
 
-Proyecto que resuelve los 8 bloques del cuaderno (78 ejercicios + 3 mini proyectos),
+Proyecto que resuelve los 8 bloques del cuaderno (75 ejercicios + 3 mini proyectos),
 con un archivo por bloque y un `Main` que los importa y ejecuta en orden.
 
 ## Estructura
 
 ```
 src/
-  com/IFCD0112/ejercicios/
+  com/ifcd0112/ejercicios/
     Main.java                         <- punto de entrada (importa y ejecuta los 8 bloques)
     bloques/
       Bloque1Variables.java           <- 20 ejercicios: variables y tipos de datos
@@ -37,13 +37,13 @@ Necesitas el **JDK** (incluye `javac`). Desde la raiz del proyecto:
 javac -d out $(find src -name "*.java")
 
 # 2) Ejecutar el Main
-java -cp out com.IFCD0112.ejercicios.Main
+java -cp out com.ifcd0112.ejercicios.Main
 ```
 
 Ejecutar un unico bloque (sin compilar el proyecto entero, requiere JDK 11+):
 
 ```bash
-java src/com/IFCD0112/ejercicios/bloques/Bloque1Variables.java
+java src/com/ifcd0112/ejercicios/bloques/Bloque1Variables.java
 ```
 
 ## Notas de diseno

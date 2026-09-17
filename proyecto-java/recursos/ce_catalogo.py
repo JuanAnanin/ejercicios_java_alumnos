@@ -1,0 +1,98 @@
+# -*- coding: utf-8 -*-
+"""Catalogo literal de los 68 criterios de evaluacion del MF0227_3
+(RD 628/2013, BOE-A-2013-9707, anexo del certificado IFCD0112).
+Texto transcrito del BOE; los apartados con guion se resumen entre corchetes."""
+
+CE = {
+"UF2404": {
+ "C1": "Dominar los conceptos fundamentales del paradigma orientado a objetos.",
+ "C2": "Desarrollar clases aplicando los fundamentos del paradigma Orientado a Objetos.",
+ "CE1.1": "Explicar las características del ciclo de desarrollo del software bajo el paradigma de orientación a objetos, distinguiendo la programación orientada a objetos como una fase dentro del mismo.",
+ "CE1.2": "Describir y enumerar las características de una clase: atributos, métodos y mecanismo de encapsulación, identificando la interfaz de la clase y lo que ésta representa.",
+ "CE1.3": "Describir y enumerar las características que definen un objeto, distinguiendo las diferencias entre los conceptos de objeto y clase.",
+ "CE1.4": "Describir la estructura y el significado de los mensajes y su relación con el comportamiento de los objetos.",
+ "CE1.5": "Explicar las características fundamentales que tienen que estar presentes en una relación entre dos clases para que pueda ser calificada como relación de herencia.",
+ "CE1.6": "Describir el mecanismo de herencia múltiple y los problemas que presenta en el proceso de desarrollo de software.",
+ "CE1.7": "Explicar el concepto de polimorfismo y enumerar y describir las características que introduce en el proceso de desarrollo del software.",
+ "CE1.8": "En un supuesto práctico, a partir de una documentación típica de diseño detallado, identificar las clases establecidas, los atributos y las relaciones.",
+ "CE2.1": "Enumerar y describir los principales criterios de calidad del software y los principales factores evaluados por las métricas orientadas a objetos.",
+ "CE2.2": "Enumerar y describir los mecanismos de gestión de memoria utilizados en la creación y destrucción de los objetos.",
+ "CE2.3": "Describir los mecanismos existentes para realizar la implementación de las relaciones entre clases (clases contenedores, objetos colección, etc).",
+ "CE2.4": "Explicar la utilización de los objetos «super» y «this» («current», «self» u otros), en relación con el acceso a los atributos definidos en una clase, desde una subclase o desde el código de la propia clase.",
+ "CE2.5": "Clasificar los diferentes lenguajes de programación, identificando y reconociendo en los mismos las principales características del paradigma orientado a objetos (clases, objetos, herencia y polimorfismo).",
+ "CE2.6": "Distinguir y utilizar las características proporcionadas por un entorno de desarrollo asociado a un lenguaje Orientado a Objetos.",
+ "CE2.7": "Distinguir las estructuras de datos más habituales (listas, pilas, árboles, grafos, etc) y los posibles mecanismos de construcción en los lenguajes orientados a objetos.",
+ "CE2.8": "Distinguir las librerías de clases estándares del lenguaje de programación conociendo la utilidad de cada una de ellas y la forma básica de uso.",
+ "CE2.9": "En un supuesto práctico, construir las clases que representan las estructuras de datos en un lenguaje orientado a objetos.",
+ "CE2.10": "En un supuesto práctico, en el que se pide realizar la programación de una clase con un lenguaje orientado a objetos y desde una documentación a nivel de diseño detallado: [diseñar un algoritmo por operación; elegir la estructura de datos de cada atributo; codificar atributos, métodos de acceso, constructores con sobrecarga y métodos; incluir las relaciones de especialización, agregación, composición o asociación; incluir el tratamiento de errores y excepciones; usar las librerías existentes para accesos a bases de datos, interfaces gráficas y otras].",
+},
+"UF2405": {
+ "C1": "Aplicar los conceptos básicos del modelo de programación web.",
+ "C2": "Realizar conexiones con bases de datos relacionales.",
+ "CE1.1": "Enumerar y describir los componentes del modelo multicapa de programación web (cliente ligero, servidores web, servidores de aplicaciones, servidores de base de datos).",
+ "CE1.2": "Enumerar y describir la función de los protocolos y tecnologías habituales (TCP/IP, http, HTML, XML, XSL, SOAP).",
+ "CE1.3": "Enumerar las características básicas de los modelos de programación ampliamente utilizados (J2EE y .NET).",
+ "CE1.4": "Describir las capas lógicas de una aplicación web (Presentación, Aplicación y Datos).",
+ "CE1.5": "Describir las características básicas del lenguaje de presentación (HTML).",
+ "CE1.6": "Describir las características básicas de los lenguajes de scripting en cliente (JavaScript, VBScript).",
+ "CE1.7": "Describir el funcionamiento de una sesión de aplicación en el modelo de programación web.",
+ "CE1.8": "Aplicar las características básicas de los lenguajes orientados a objetos a la recepción de solicitudes y preparación de la capa de presentación (JSP, ASP, Servlets, PHP).",
+ "CE2.1": "Enumerar y describir las diferentes tecnologías de conexión con la BBDD desde las aplicaciones.",
+ "CE2.2": "Analizar las diferentes tecnologías de conexión y acceso a datos, determinando las que se deben utilizar para la manipulación del sistema de base de datos.",
+ "CE2.3": "Enumerar y describir las clases que proporcionan los medios adecuados para efectuar consultas, actualizaciones, acceder y operar con una base de datos relacional.",
+ "CE2.4": "Describir los procedimientos para realizar dichas consultas (abrir y cerrar conexiones, ejecutar comandos, recoger sus resultados y utilizarlos).",
+ "CE2.5": "En supuestos prácticos debidamente caracterizados de incorporación de un acceso a una base de datos relacional desde una clase, a partir de un diseño: [seleccionar la tecnología de conexión; cargar el controlador; realizar la conexión; desarrollar la clase según la especificación realizando consultas simples; comprobar su funcionamiento mediante pruebas; documentar la clase].",
+ "CE2.6": "En supuestos prácticos debidamente caracterizados de modificación de una aplicación con acceso a una base de datos relacional desde una clase, a partir de un cambio en el diseño de la aplicación o de la base de datos: [modificar el código; incluir el histórico y la explicación en la cabecera; modificar los programas de prueba; comprobar mediante pruebas que el cambio no altera el resto; actualizar la documentación afectada].",
+},
+"UF2406": {
+ "C1": "Manejar las herramientas de ingeniería de software.",
+ "C2": "Verificar la corrección de las clases desarrolladas mediante la realización de pruebas.",
+ "C3": "Elaborar la documentación completa relativa a las clases desarrolladas y pruebas realizadas.",
+ "C4": "Realizar modificaciones de clases existentes por cambios en las especificaciones.",
+ "C5": "Desarrollar interfaces de usuario en lenguajes de programación orientados a objeto, a partir del diseño detallado.",
+ "CE1.1": "Enumerar y comparar los modelos de ingeniería software, indicando los conceptos principales en los que se basan, su ámbito de uso y cómo se estructuran.",
+ "CE1.2": "Describir las fases, en cada modelo, del proceso de ingeniería de software, indicando para cada una: [datos de partida (entradas); datos finales (salidas); funciones realizadas en la fase; documentación generada; trazabilidad].",
+ "CE1.3": "Describir en detalle los conceptos fundamentales de una metodología de ingeniería software basada en la orientación a objetos.",
+ "CE1.4": "Identificar en las herramientas de desarrollo orientadas a objetos disponibles los diferentes componentes y describir cómo se implementan los conceptos de la metodología y las distintas fases del proceso de ingeniería de software, haciendo especial hincapié en: diseño, codificación, pruebas unitarias, documentación, evaluación de la calidad y métricas, gestión de la configuración y cambios.",
+ "CE1.5": "En un supuesto práctico utilizar las herramientas de desarrollo, en el caso de que sea posible, para: [extraer la información de diseño de una clase; codificarla; depurarla; incorporar y trazar pruebas unitarias; configurar baterías automáticas; elaborar y personalizar documentación mediante plantillas; generar informes de calidad y métricas; incorporar cambios].",
+ "CE2.1": "Enumerar y describir las herramientas y utilidades más comunes para la depuración de programas.",
+ "CE2.2": "Enumerar y describir los tipos de pruebas posibles que se pueden dar en el proceso de desarrollo de aplicaciones, distinguiendo especialmente aquellas que son responsabilidad del programador.",
+ "CE2.3": "Enumerar y describir los tipos de pruebas que se deben realizar a una clase para verificar su corrección.",
+ "CE2.4": "Utilizar las características proporcionadas por un entorno de desarrollo para realizar la depuración de un programa, mediante: [ejecución paso a paso; establecimiento de puntos de parada (condicionales o incondicionales); monitorización de variables].",
+ "CE2.5": "En supuestos prácticos, documentar una estrategia de pruebas completa a una clase a partir de su documentación de diseño, de forma que se asegure el óptimo funcionamiento en aspectos como: [coherencia en el estado de los objetos; todos los escenarios posibles; rendimiento; casos límite; situaciones excepcionales].",
+ "CE2.6": "En supuestos prácticos, a partir de una clase y la estrategia definida de pruebas: [establecer el conjunto de secuencias y estados iniciales de los objetos; establecer el criterio de evaluación de los resultados; automatizar el proceso mediante programas de prueba].",
+ "CE2.7": "Realizar pruebas a una clase mediante herramientas de prueba.",
+ "CE3.1": "Describir la información que debe acompañar a una clase desarrollada.",
+ "CE3.2": "Describir los criterios fundamentales para la inclusión de cabeceras y comentarios en el código.",
+ "CE3.3": "Proponer índices (plantillas) para los documentos de diseño y explicar el contenido de cada uno de los apartados.",
+ "CE3.4": "Proponer índices (plantillas) para los documentos de pruebas (planificación y resultados) y explicar el contenido de cada uno de los apartados.",
+ "CE3.5": "Proponer índices (plantillas) para la documentación de operación y mantenimiento (manuales técnicos) y explicar el contenido de cada uno de los apartados.",
+ "CE3.6": "Aplicar unos criterios de normalización establecidos para incluir cabeceras y comentarios en el código.",
+ "CE3.7": "En un supuesto práctico, a partir de una clase desarrollada, elaborar la documentación de diseño de la clase de acuerdo a un índice establecido.",
+ "CE3.8": "En un supuesto práctico, a partir de una clase y conjunto de pruebas, elaborar la documentación de pruebas (planificación y resultados) de acuerdo a un índice establecido.",
+ "CE3.9": "En un supuesto práctico, a partir de la documentación de desarrollo y pruebas, elaborar la documentación de operación y mantenimiento de acuerdo a un índice establecido.",
+ "CE3.10": "Realizar la documentación de las clases mediante herramientas de documentación automática.",
+ "CE4.1": "Enumerar y describir los conceptos fundamentales de la gestión de la configuración del software desarrollado por una organización.",
+ "CE4.2": "Enumerar y describir los conceptos fundamentales de la gestión de la configuración de la documentación.",
+ "CE4.3": "Describir los pasos y precauciones fundamentales en el proceso de modificación de clases existentes.",
+ "CE4.4": "En un supuesto práctico de modificación de un documento, y de acuerdo con un procedimiento: [realizar la modificación en el documento; marcar la hoja cambiada con la modificación y el código de revisión; elaborar la propuesta de cambio según el formato especificado; editar la nueva edición o revisión del documento].",
+ "CE4.5": "En un supuesto práctico de modificación de una clase por un cambio en su diseño y de acuerdo a un procedimiento: [modificar el código incorporando el cambio; incluir en el lugar de la modificación y en la cabecera del componente los datos del histórico y la explicación; modificar los programas de prueba asociados; comprobar mediante pruebas que la modificación no ha alterado el resto de la clase; actualizar toda la documentación afectada].",
+ "CE4.6": "Utilizar herramientas para la gestión de la configuración y las versiones del software.",
+ "CE5.1": "Interpretar diagramas de casos de uso y analizar las necesidades y peticiones de usuarios.",
+ "CE5.2": "Identificar y describir las clases básicas que se usan para el interfaz hombre / máquina.",
+ "CE5.3": "Explicar el concepto de evento y de programación orientada a eventos y su implementación en los lenguajes orientados a objetos en relación con las clases necesarias para el desarrollo de la interfaz.",
+ "CE5.4": "Identificar los recursos multimedia que pueden incluirse en una ventana de interfaz de usuario.",
+ "CE5.5": "Realizar el diseño de las ventanas correspondientes a la interfaz de usuario, aplicando criterios de ergonomía, eficacia y posible utilización por discapacitados, en la comunicación de información.",
+ "CE5.6": "En un supuesto práctico de construcción de un interfaz de usuario: [identificar los elementos básicos que constituyen la interfaz en la documentación de diseño; asociar a cada elemento la clase adecuada de la librería disponible; construir la interfaz con una herramienta de diseño de interfaz gráfica; identificar y describir el código fuente generado por la herramienta].",
+ "CE5.7": "En un supuesto práctico de construcción de una aplicación con interfaz de usuario, a partir del código generado por una herramienta de interfaz gráfica: [incluir el código necesario para incorporar otros recursos multimedia; programar las clases necesarias para conectar la interfaz con la aplicación, siguiendo los criterios de calidad establecidos].",
+ "CE5.8": "En un supuesto práctico, sobre una interfaz de usuario desarrollada y con la documentación correspondiente al diseño detallado: [evaluar que los servicios de presentación cumplen las necesidades del usuario y usan de forma óptima los recursos; establecer criterios de validación; describir tipos de errores; comprobar que los formatos de entrada y salida son los esperados; verificar que las operaciones indebidas no alteran la fiabilidad; elaborar la documentación de la interfaz; redactar la guía de usuario].",
+},
+}
+
+if __name__ == "__main__":
+    t = 0
+    for uf, d in CE.items():
+        n = len([k for k in d if k.startswith("CE")])
+        print(uf, n)
+        t += n
+    print("TOTAL", t)

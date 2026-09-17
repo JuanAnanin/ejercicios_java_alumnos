@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<!--
+  UF2405 - BLOQUE 4 - EJERCICIO 9
+  Formulario HTML con validacion en cliente
+  Criterios de evaluacion: CE1.5, CE1.6
+
+  IMPORTANTE (apartado 6): esta validacion NO protege nada. Mejora la
+  experiencia de usuario avisando antes de enviar, pero cualquiera puede
+  desactivar JavaScript, editar la pagina desde las herramientas del navegador
+  o enviar la peticion directamente con curl. La unica validacion que garantiza
+  la integridad de los datos es la del servidor, que esta en el ejercicio 11.
+  La regla practica: validar en cliente por comodidad, en servidor por
+  seguridad. Siempre las dos, nunca solo una.
+-->
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Alta de mascota - Clinica veterinaria</title>
+    <style>
+        body   { font-family: system-ui, sans-serif; margin: 2rem; }
+        label  { display: inline-block; width: 12rem; margin: .4rem 0; }
+        .error { color: #b00020; font-size: .9rem; margin-left: .5rem; }
+    </style>
+</head>
+<body>
+
+<h1>Alta de nueva mascota</h1>
+
+<!-- Apartado 2: envio por POST a la direccion altaMascota.
+     POST y no GET porque esta peticion CAMBIA el estado del servidor: con GET
+     los datos irian en la URL, quedarian en el historial y en los registros del
+     servidor, y la pagina seria recargable creando duplicados. -->
+<form id="formAlta" action="altaMascota" method="post" onsubmit="return validar()">
+
+    <label for="nombre">Nombre:</label>
+    <input type="text" id="nombre" name="nombre">
+    <span id="errNombre" class="error"></span><br>
+
+    <label for="especie">Especie:</label>
+    <select id="especie" name="especie">
+        <option value="Perro">Perro</option>
+        <option value="Gato">Gato</option>
+        <option value="Ave">Ave</option>
+        <option value="Otro">Otro</option>
+    </select><br>
+
+    <label for="fechaNac">Fecha de nacimiento:</label>
+    <input type="date" id="fechaNac" name="fechaNac">
+    <span id="errFecha" class="error"></span><br>
+
+    <label for="peso">Peso (kg):</label>
+    <input type="text" id="peso" name="peso">
+    <span id="errPeso" class="error"></span><br>
+
+    <label for="dni">DNI del dueno:</label>
+    <input type="text" id="dni" name="dni">
+    <span id="errDni" class="error"></span><br>
+
+    <!-- Apartado 5: prevencion de errores. El boton nace deshabilitado. -->
+    <input type="submit" id="btnEnviar" value="Dar de alta" disabled>
+</form>
+
+<script>
+// -------------------------------------------------------------------------
+// Apartado 5: el boton solo se habilita cuando estan los datos minimos.
+// Es prevencion de errores, uno de los criterios clasicos de usabilidad:
+// vale mas impedir el error que informar de el una vez cometido.
+// -------------------------------------------------------------------------
+function comprobarHabilitacion() {
+    var ok = document.getElementById('nombre').value.trim() !== ''
+          && document.getElementById('dni').value.trim() !== '';
+    document.getElementById('btnEnviar').disabled = !ok;
+}
+document.getElementById('nombre').addEventListener('input', comprobarHabilitacion);
+document.getElementById('dni').addEventListener('input', comprobarHabilitacion);
+
+function limpiarErrores() {
+    var marcas = document.querySelectorAll('.error');
+    for (var i = 0; i < marcas.length; i++) {
+        marcas[i].textContent = '';
+    }
+}
+
+// -------------------------------------------------------------------------
+// Apartados 3 y 4: validacion antes del envio.
+// Devolver false cancela el envio, porque el formulario llama a esta funcion
+// desde onsubmit con "return validar()".
+// -------------------------------------------------------------------------
+function validar() {
+    var valido = true;
+    limpiarErrores();
+
+    if (document.getElementById('nombre').value.trim() === '') {
+        document.getElementById('errNombre').textContent = 'El nombre es obligatorio';
+        valido = false;
+    }
+
+    if (document.getElementById('dni').value.trim() === '') {
+        document.getElementById('errDni').textContent = 'El DNI del dueno es obligatorio';
+        valido = false;
+    }
+
+    var peso = parseFloat(document.getElementById('peso').value);
+    if (isNaN(peso) || peso <= 0) {
+        document.getElementById('errPeso').textContent = 'Introduce un peso positivo';
+        valido = false;
+    }
+
+    // Ojo con las fechas: se compara con el dia de hoy a las 00:00 para que una
+    // fecha de hoy no se rechace por unas horas de diferencia.
+    var texto = document.getElementById('fechaNac').value;
+    if (texto !== '') {
+        var fecha = new Date(texto);
+        var hoy = new Date();
+        hoy.setHours(0, 0, 0, 0);
+        if (fecha > hoy) {
+            document.getElementById('errFecha').textContent = 'La fecha no puede ser futura';
+            valido = false;
+        }
+    }
+
+    return valido;
+}
+</script>
+
+</body>
+</html>
